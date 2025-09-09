@@ -1,0 +1,11 @@
+  if k==1,
+    wdes = apc1(1)*dphi+apc1(2)*intdphi;
+    dw = (wdes-w);
+    intdw = intdw+dw*dt;
+
+    if wdes > wmax, wdes = wmax;
+   elseif wdes <-wmax, wdes = -wmax;
+   end
+   rd = apc1(3)*dw+apc1(4)*intdw;
+  else
+
