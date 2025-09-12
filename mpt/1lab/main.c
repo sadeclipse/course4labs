@@ -24,6 +24,7 @@ int main(void)
     while (1)
     {
         numout(angle);
+        clearSegments();
     }
 }
 
@@ -45,7 +46,9 @@ int8_t Digit(int32_t d, uint8_t m)
 
 void numout(int32_t number) // функция, которая выводит цифру
 {
-
+    if (number > 9999) | (number < -9999)
+    return;
+    
     if (number == 0)
     {
         PORTA |= (1 << 5);   // подача в регистр нужной последовательности, чтобы выбрать нужный разряд
