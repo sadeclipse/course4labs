@@ -1,0 +1,7 @@
+{
+    "AVR.source.compiler": "/usr/local/bin/avr-gcc",
+    "AVR.programmer.tool": "/usr/local/bin/avrdude",
+    "AVR.source.libraries": [],
+    "AVR.device.type": "atmega128a",
+    "AVR.device.frequency": 11059200
+}
