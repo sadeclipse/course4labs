@@ -5,7 +5,7 @@ from paths import *
 path1 = r"/Users/new/Desktop/course4labs/cv/lab2/2-1.jpg"
 
 
-def dist(point: list):
+def dist(point: np.ndarray):
     return ((point[0] - point[2]) ** 2 + (point[1] - point[3]) ** 2) ** (1 / 2)
 
 

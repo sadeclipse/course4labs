@@ -4,8 +4,9 @@ from paths import *
 
 
 image = cv2.imread(path4_1)
-cv2.imshow("window", image)
-cv2.waitKey()
+cv2.namedWindow("SourcePic", cv2.WINDOW_NORMAL)
+cv2.imshow("SourcePic", image)
+cv2.waitKey(0)
 
 image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 # Применение Гауссова размытия для уменьшения шума и улучшения обнаружения границ
@@ -33,6 +34,7 @@ for line in lines:
     )  ## рисуем прямую по этим двум точкам
 
 # Отображение результата
+cv2.namedWindow("only numbers", cv2.WINDOW_NORMAL)
 cv2.imshow("only numbers", edges)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
