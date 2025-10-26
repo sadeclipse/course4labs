@@ -42,12 +42,12 @@ def main():
 
     ##delete everything inside the circle
     clear_img = erode_and_dilate(
-        image=image, mode="close", iterations=2, kernel=np.ones((3, 3), dtype=np.uint8)
+        image=image, mode="close", iterations=1, kernel=np.ones((3, 3), dtype=np.uint8)
     )
     show_img_and_wait(clear_img, "del from cicrles custom")
 
     pr_clear_img = cv2.morphologyEx(
-        image, op=cv2.MORPH_CLOSE, kernel=np.ones((3, 3), dtype=np.uint8), iterations=2
+        image, op=cv2.MORPH_CLOSE, kernel=np.ones((3, 3), dtype=np.uint8), iterations=1
     )
     show_img_and_wait(pr_clear_img, "del from cicrles lib")
 
