@@ -1,4 +1,4 @@
-function f=fun5_(x)
+function f=fun5_2(x)
  x1=x(:,1);
  x2=x(:,2);
  x3=x(:,3);

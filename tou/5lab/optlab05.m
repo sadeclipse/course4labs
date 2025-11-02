@@ -74,12 +74,11 @@ p0=[xp,yp];
 
 disp(['Начальная точка: ', num2str(p0)])
 
-opt = optimset ("fminsearch")
-opt.Display = "iter"
+opt = optimset ("fminsearch");
+opt.Display = "iter";
 x0=p0
 [x fval] = fminsearch ( 'fun5_', x0, opt)
 
-pause
 
 
 % Начальный симплекс
@@ -239,7 +238,7 @@ plot(pt_B(1),pt_B(2),'r*')
 figure(1);
 plot(pt_B(1),pt_B(2),'r*')
 
-
+% 
 %figure(2);
 %plot3(pt_0(1),pt_0(2),0,'r*')
 %hold on
