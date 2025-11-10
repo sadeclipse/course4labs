@@ -2,11 +2,12 @@ import cv2
 import numpy as np
 
 # for mac
-path1 = "/Users/new/Desktop/course4labs/cv/lab1/1_1.jpg"
+# path1 = "/Users/new/Desktop/course4labs/cv/lab1/1_1.jpg"
 # for win
-# path1 = r"C:\Users\user\Desktop\course4labs\cv\lab1\1_1.jpg"
+path1 = r"C:\Users\user\Desktop\course4labs\cv\lab1\1_1.jpg"
 
-#my cool class
+
+# my cool class
 class Picture:
     def __init__(self, path, readmode, lifetime, winName) -> None:
         self.path = path
