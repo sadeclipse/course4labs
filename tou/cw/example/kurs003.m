@@ -7,12 +7,12 @@ needOpt = 0; % 0 – simulation only
 kv = 0.000874; % 0.5*Omega*C/m
 vmax = 14*0.514; %m/s
 reverse = 1; %enable reverese
-kregv = 6; % av: kv*(V*-v)
-kregi = 0.001; % ai
+kregv = 5.99375 ; % av: kv*(V*-v)
+kregi = 0*0.001; % ai
 distance_nm = 5; %mileage
 distance = distance_nm*1852; %m:
 vset = 12*0.514; %m/s
-vcur = 0*0.514; % current spd, m/s
+vcur = 1*0.514; % current spd, m/s %-1 vstr
 vwind = 6; % wind spd, m/s
 
 % Simulation settings
@@ -25,8 +25,8 @@ vend = 0.1; %v<vend in the end of trackstop
 parmodel = [distance, vset, kregv, kv, vmax, dt, tmax, reverse, vend, vcur, kregi ];
 %SIMULATION
 %PUT YOUR PARAMS HERE
-t1 = 5;
-stopdistance = 800;
+t1 = 69.52;
+stopdistance = 800.551;
 params = [t1, stopdistance];
 flagplot = 1;
 J = kurscrit(params);
@@ -42,7 +42,7 @@ flagplot = 1;
 J = kurscrit(paropt)
 
  time1 = 0:20:300;
-sur2 = 0:500:10000;
+sur2 = 0:100:2000;
 J1 = [];
 for i = 1:1:16
 for j = 1:1:21

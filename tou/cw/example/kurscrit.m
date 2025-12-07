@@ -135,11 +135,8 @@ disp(pend)
 disp('Total criteria')
 disp(J)
 subplot(311), plot(at, aS), grid, title('S(t)')
-xlim([0 2500])
 subplot(312), plot(at, aV, at, aVdes),
-xlim([0 2500])
 grid, title('v(t)'), legend('v(t)','vdes(t)')
 subplot(313), plot(at, aU, at, aP), grid,
 title('U/Umax(t), Power/Powermax'), legend('U/Umax(t)', 'P/Pmax(t)')
-xlim([0 2500])
 end

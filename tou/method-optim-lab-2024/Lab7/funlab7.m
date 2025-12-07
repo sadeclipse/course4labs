@@ -75,10 +75,10 @@ for i=1:length(t),
     phides = phi_switch_u(j_switch_u);
     if j_switch_u < length(t_switch_u),
       j_switch_u = j_switch_u +1;
-    endif
-  endif
-
-  if phides!=phidesold,
+    end
+  end
+end
+  if phides~=phidesold,
     static_err = [static_err,abs(phi-phides)];
 
     di = T1_now/dt;
@@ -124,7 +124,7 @@ for i=1:length(t),
 
   if abs(dphi)>3,
     intdphi = 0;
-  endif
+  end
 
   wdes=0;
   dw = wdes-w;
@@ -156,7 +156,7 @@ for i=1:length(t),
   arda =[arda, rd_actual];
   aphiu=[aphiu, phi];
   aphides = [aphides,phides];
-end
+
 
 
 
@@ -189,4 +189,5 @@ hold on
 
 plot(t,aphiu);
 
+end
 end
